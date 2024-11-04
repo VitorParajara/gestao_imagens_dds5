@@ -48,7 +48,7 @@ export async function mostrarImagens(req,res) {
     }
 }
 
-export async function mostrarImagem(req,res) {
+export async function downloadImagem(req,res) {
     console.log('ImagemController : : Mostrando Imagem');
    
 
