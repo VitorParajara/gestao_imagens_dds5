@@ -69,7 +69,7 @@ export async function deleteImagem(id_imagem) {
         if (imagem.length > 0) {
             const nomeImg = imagem[0].caminho;
             await conexao.query(sql,params);
-            await fs.unlink(__dirname, '..', '..', 'public', 'img', nomeImg);
+            await fs.unlink(path.join(__dirname, '..', '..', 'public', 'img', nomeImg));
             return [200, { message: 'Imagem deletada' }];
         }
         else {
